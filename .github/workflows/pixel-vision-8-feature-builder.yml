@@ -95,8 +95,6 @@ jobs:
 
 
             ## v${{env.CURRENT}}
-
-
             ${{ env.REPORT }}. 
             
             
