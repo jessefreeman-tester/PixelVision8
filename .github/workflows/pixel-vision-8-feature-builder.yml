@@ -77,6 +77,7 @@ jobs:
           REPORT="${REPORT//$'\n'/'<br/>'}"
           REPORT="${REPORT//$'## v${{ env.CURRENT }}'/''}"
           REPORT="${REPORT//$'<br/><br/>'/'<br/>'}"
+          REPORT="${REPORT//$'<br/>*'/'*'}"
           echo -e "REPORT=$REPORT" >> $GITHUB_ENV
 
       # Update the release with the change log
