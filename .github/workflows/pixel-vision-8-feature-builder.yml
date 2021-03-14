@@ -72,15 +72,6 @@ jobs:
       - name: View Changelog
         run: cat .github/CHANGELOG.md
 
-      - name: save Changelog
-        id: log
-        run: |
-          REPORT="$(cat .github/CHANGELOG.md)"
-          #REPORT="${REPORT//'%'/'%25'}"
-          #REPORT="${REPORT//$'\n'/'$LS'}"
-          #REPORT="${REPORT//$'\r'/'$LS'}"
-          echo -e "REPORT=$REPORT" >> $GITHUB_ENV
-
       # Update the release with the change log
       - name: Update Release
         id: update_release
@@ -90,4 +81,4 @@ jobs:
           allow_override: true
           tag: v${{env.CURRENT}}
           gzip: false
-          body: ${{cat .github/CHANGELOG.md}}
+          body: "$(cat .github/CHANGELOG.md)"
