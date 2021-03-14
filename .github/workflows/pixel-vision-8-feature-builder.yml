@@ -74,8 +74,8 @@ jobs:
         run: |
           REPORT="$(cat .github/CHANGELOG.md)"
           REPORT="${REPORT//'%'/'%25'}"
-          REPORT="${REPORT//$'\n'/'^M'}"
-          REPORT="${REPORT//$'##v${{ env.CURRENT }}'/''}"
+          REPORT="${REPORT//$'\n'/'<br/>'}"
+          REPORT="${REPORT//$'## v${{ env.CURRENT }}'/''}"
           echo -e "REPORT=$REPORT" >> $GITHUB_ENV
 
       # Update the release with the change log
