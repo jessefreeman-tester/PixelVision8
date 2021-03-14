@@ -72,7 +72,7 @@ jobs:
       - name: save Changelog
         id: log
         run: |
-          REPORT='cat .github/CHANGELOG.md'
+          REPORT=$(cat .github/CHANGELOG.md)
           #REPORT="${REPORT//'%'/'%25'}"
           #REPORT="${REPORT//$'\n'/'<br/>'}"
           #REPORT="${REPORT//$'##'/''}"
