@@ -99,7 +99,7 @@ jobs:
             ***
             
             
-            You'll be able to download a preview build of Pixel Vision 8 for Windows, Mac, and Linux (x64 & ARM 64) below. This project is continually updated, and automated builds are made available to allow users to preview new features, bug fixes, and optimizations to the underlying codebase. Please make sure to backup your [Workspace](https://docs.pixelvision8.com/pixelvisionos) before running this or any new build of Pixel Vision 8.
+            You'll be able to download a preview build of Pixel Vision 8 for Windows, Mac, and Linux below. This project is continually updated, and automated builds are made available to allow users to preview new features, bug fixes, and optimizations to the underlying codebase. Please make sure to backup your [Workspace](https://docs.pixelvision8.com/pixelvisionos) before running this or any new build of Pixel Vision 8.
 
 
             Due to how large and complex the codebase is, these incremental builds help reduce the time between releases and allow the collection developer feedback. Here is a list of the most recent changes:
@@ -111,3 +111,7 @@ jobs:
             
             
             In addition, you can see the current open issues [here](https://github.com/PixelVision8/PixelVision8/issues) or use one of the following links to submit a new [bug](https://github.com/PixelVision8/PixelVision8/issues/new?assignees=jessefreeman&labels=bug&template=bug_report.md), [feature](https://github.com/PixelVision8/PixelVision8/issues/new?assignees=jessefreeman&labels=bug&template=feature_request.md) or [question](https://github.com/PixelVision8/PixelVision8/issues/new?assignees=jessefreeman&labels=bug&template=question.md). To learn more about Pixel Vision 8, check out [the documentation](https://docs.pixelvision8.com/), explore [the examples](https://www.pixelvision8.com/examples), join [the Discord server](https://discord.gg/pixelvision8), and visit [the main website](https://www.pixelvision8.com/).
+          files: >
+            PixelVision8-v${{env.CURRENT}}-macOS.zip:Releases/Final/PixelVision8-macOS.zip
+            PixelVision8-v${{env.CURRENT}}-win.zip:Releases/Final/PixelVision8-win.zip
+            PixelVision8-v${{env.CURRENT}}-linux.zip:Releases/Final/PixelVision8-linux.zip
