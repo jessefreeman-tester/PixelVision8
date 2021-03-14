@@ -90,6 +90,15 @@ jobs:
           tag: v${{env.CURRENT}}
           gzip: false
           body: >
+          
+            This is an **experimental build** of a new renderer and APIs. A lot of tools are broken, changes are not documented, and there is a new version of the core engine called PV8 Lite that is intended for developers looking to build games in pure C# as close to the metal as possible with no extra dependencies. 
+
+
+            You have been warned!
+
+            ***
+            
+            
             You'll be able to download a preview build of Pixel Vision 8 for Windows, Mac, and Linux (x64 & ARM 64) below. This project is continually updated, and automated builds are made available to allow users to preview new features, bug fixes, and optimizations to the underlying codebase. Please make sure to backup your [Workspace](https://docs.pixelvision8.com/pixelvisionos) before running this or any new build of Pixel Vision 8.
 
 
