@@ -76,7 +76,7 @@ jobs:
           #REPORT="${REPORT//'%'/'%25'}"
           #REPORT="${REPORT//$'\n'/'<br/>'}"
           #REPORT="${REPORT//$'##'/''}"
-          echo "REPORT=$REPORT" >> $GITHUB_ENV
+          echo -e "REPORT=$REPORT" >> $GITHUB_ENV
 
       # Update the release with the change log
       - name: Update Release
