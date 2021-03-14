@@ -81,4 +81,4 @@ jobs:
           allow_override: true
           tag: v${{env.CURRENT}}
           gzip: false
-          body: $(cat .github/CHANGELOG.md)
+          body: ${{ cat .github/CHANGELOG.md }}
