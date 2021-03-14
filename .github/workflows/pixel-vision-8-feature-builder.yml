@@ -75,7 +75,7 @@ jobs:
           REPORT="$(cat .github/CHANGELOG.md)"
           REPORT="${REPORT//'%'/'%25'}"
           REPORT="${REPORT//$'\n'/'^M'}"
-          REPORT="${REPORT//$'##'/''}"
+          REPORT="${REPORT//$'##v${{ env.CURRENT }}'/''}"
           echo -e "REPORT=$REPORT" >> $GITHUB_ENV
 
       # Update the release with the change log
@@ -94,4 +94,10 @@ jobs:
             Due to how large and complex the codebase is, these incremental builds help reduce the time between releases and allow the collection developer feedback. Here is a list of the most recent changes:
 
 
-            ${{ env.REPORT }}. In addition, you can see the current open issues [here](https://github.com/PixelVision8/PixelVision8/issues) or use one of the following links to submit a new [bug](https://github.com/PixelVision8/PixelVision8/issues/new?assignees=jessefreeman&labels=bug&template=bug_report.md), [feature](https://github.com/PixelVision8/PixelVision8/issues/new?assignees=jessefreeman&labels=bug&template=feature_request.md) or [question](https://github.com/PixelVision8/PixelVision8/issues/new?assignees=jessefreeman&labels=bug&template=question.md). To learn more about Pixel Vision 8, check out [the documentation](https://docs.pixelvision8.com/), explore [the examples](https://www.pixelvision8.com/examples), join [the Discord server](https://discord.gg/pixelvision8), and visit [the main website](https://www.pixelvision8.com/).
+            ## v${{env.CURRENT}}
+
+
+            ${{ env.REPORT }}. 
+            
+            
+            In addition, you can see the current open issues [here](https://github.com/PixelVision8/PixelVision8/issues) or use one of the following links to submit a new [bug](https://github.com/PixelVision8/PixelVision8/issues/new?assignees=jessefreeman&labels=bug&template=bug_report.md), [feature](https://github.com/PixelVision8/PixelVision8/issues/new?assignees=jessefreeman&labels=bug&template=feature_request.md) or [question](https://github.com/PixelVision8/PixelVision8/issues/new?assignees=jessefreeman&labels=bug&template=question.md). To learn more about Pixel Vision 8, check out [the documentation](https://docs.pixelvision8.com/), explore [the examples](https://www.pixelvision8.com/examples), join [the Discord server](https://discord.gg/pixelvision8), and visit [the main website](https://www.pixelvision8.com/).
